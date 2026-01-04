@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keshav Photo Studio</title>
+
+  <!-- Favicons (agar aapne convert kar liye to ye files kaam karengi) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- logo: PNG preferred; fallback to SVG if PNG not present -->
+      <a class="brand-link" href="#home">
+        <img src="img/logo-480x160.png" alt="Keshav Photo Studio" class="site-logo"
+             onerror="this.onerror=null;this.src='img/logo.svg'"/>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Professional Photography — Shaadi, Events, Portraits</h2>
+      <p>Hum aapke palon ko yaadgar banate hain. Natural light, creative framing aur professional editing.</p>
+      <a class="btn" href="#contact">Book Kijiye</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h3>About</h3>
+    <p>Keshav Photo Studio mein hum moments ko artistry ke saath capture karte hain. 10+ saal ka anubhav — weddings, pre-wedding, portraits, events aur product photography mein mahir.</p>
+  </section>
+
+  <section id="services" class="container section">
+    <h3>Services</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Shaadi / Wedding</h4>
+        <p>Full-day coverage, candid aur traditional shots, album design.</p>
+      </div>
+      <div class="card">
+        <h4>Pre-wedding</h4>
+        <p>Outdoor shoots, location scouting aur creative direction.</p>
+      </div>
+      <div class="card">
+        <h4>Portraits</h4>
+        <p>Studio aur outdoor portraits — family, baby, professional headshots.</p>
+      </div>
+      <div class="card">
+        <h4>Product</h4>
+        <p>Clean product shots, e-commerce ready editing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="container section">
+    <h3>Portfolio</h3>
+    <p>Below are sample images. Aap apni images replace kar sakte hain (see README).</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80" alt="Wedding candid moments"/>
+        <small>Shaadi — Romantic moments</small>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Pre-wedding beach shoot"/>
+        <small>Pre-wedding — Outdoor shoot</small>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80" alt="Portrait studio sample"/>
+        <small>Portrait — Studio</small>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80" alt="Product photography sample"/>
+        <small>Product — Clean background</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container section">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:KESHAVSTUDIO1212@GMAIL.COM">KESHAVSTUDIO1212@GMAIL.COM</a></p>
+    <p>Phone: <a href="tel:+919911539320">+91 9911539320</a></p>
+    <p>Aap niche form se message bhej sakte hain (ye demo form hai):</p>
+    <form class="contact-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Aapka Naam" required />
+      <input type="email" name="email" placeholder="Aapka Email" required />
+      <input type="text" name="subject" placeholder="Subject" />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Keshav Photo Studio — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Dhanyavaad! Aapka message receive ho gaya (demo).');
+    });
+  </script>
+</body>
+</html>
